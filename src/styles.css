@@ -1,0 +1,266 @@
+/* src/styles.css */
+
+/* Variáveis de cor */
+:root {
+    --barbie-pink: #ff69b4;
+    --barbie-light-pink: #ffc0cb;
+    --barbie-lighter-pink: #ffd1dc;
+    --barbie-white: #ffffff;
+    --barbie-gray: #f0f0f0;
+    --text-dark: #333333;
+  }
+  
+  /* Reset básico e fonte padrão */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Garanta que a fonte está linkada no public/index.html */
+  }
+  
+  /* Estilo base do corpo */
+  body {
+    background-color: var(--barbie-lighter-pink);
+    color: var(--text-dark);
+    /* Removemos o padding de 20px daqui para controlar melhor nos elementos */
+  }
+  
+  /* Estilo base da aplicação */
+  .App {
+    min-height: 100vh; /* Garante que o App ocupe pelo menos a altura da tela */
+    display: flex;
+    flex-direction: column; /* Organiza header, main e footer verticalmente */
+  }
+  
+  /* --- Estilos do Header --- */
+  header {
+    background-color: var(--barbie-light-pink);
+    padding: 20px 0 0; /* Adiciona padding em cima, remove o de baixo (já tem no nav) */
+    text-align: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Espaço entre logo/título e a navbar */
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Para não distorcer a silhueta */
+  }
+  
+  header h1 {
+    color: var(--barbie-pink);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0; /* Remove margem padrão do h1 */
+  }
+  
+  /* --- Estilos da Navegação --- */
+  nav {
+    background-color: var(--barbie-pink); /* Cor de fundo da barra de navegação */
+  }
+  
+  .menu-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0; /* Espaçamento interno vertical da barra */
+  }
+  
+  .menu-nav li {
+    margin: 0 20px; /* Espaçamento horizontal entre os itens */
+  }
+  
+  .menu-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  
+  .menu-nav a:hover {
+    color: var(--barbie-lighter-pink); /* Efeito hover */
+  }
+  
+  /* --- Estilos do Conteúdo Principal (Main) --- */
+  main {
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 40px 20px; /* Espaçamento interno (vertical, horizontal) */
+    flex: 1; /* Faz o main ocupar o espaço restante entre header e footer */
+  }
+  
+  /* Estilos das Seções (Entradas, Pratos Principais, Sobremesas) */
+  .menu-section {
+    margin-bottom: 60px; /* Espaço entre as seções */
+  }
+  
+  .menu-section:last-child {
+      margin-bottom: 0; /* Remove margem inferior da última seção */
+  }
+  
+  .menu-section h2 {
+    color: var(--barbie-pink);
+    text-align: center;
+    font-size: 2.2rem; /* Tamanho do título da seção */
+    margin-bottom: 40px; /* Espaço abaixo do título da seção */
+    position: relative;
+    font-weight: 600;
+  }
+  
+  /* Linha decorativa abaixo do título da seção */
+  .menu-section h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--barbie-pink);
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* --- Estilos da Lista e Itens (Reutilizados/Adaptados) --- */
+  .lista-itens-cardapio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 35px;
+  }
+  
+  .menu-item {
+    background-color: var(--barbie-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu-item-imagem {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .menu-item h3 {
+    padding: 18px 18px 8px;
+    color: var(--barbie-pink);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+  }
+  
+  .menu-item p {
+    padding: 0 18px 18px;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 10px;
+  }
+  
+  .menu-item-preco {
+    display: block;
+    padding: 0 18px 18px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    text-align: right;
+    margin-top: auto;
+  }
+  
+  /* --- Estilos do Rodapé --- */
+  footer {
+    background-color: var(--barbie-pink);
+    color: white;
+    text-align: center;
+    padding: 25px 20px; /* Aumenta o padding do footer */
+    margin-top: auto; /* Garante que o footer fique no final, mesmo com pouco conteúdo */
+  }
+  
+  /* --- Media Queries (Responsividade - Mantidas do CSS anterior, podem precisar de ajustes finos) --- */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    .menu-nav {
+      /* Poderia quebrar a linha se necessário */
+      /* flex-direction: column; */
+      padding: 10px 0;
+    }
+  
+    .menu-nav li {
+      margin: 0 10px; /* Menor espaçamento */
+    }
+  
+    .menu-section h2 {
+        font-size: 1.9rem;
+    }
+  
+    .lista-itens-cardapio {
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 25px;
+    }
+  
+     .menu-item h3 {
+      font-size: 1.3rem;
+    }
+  
+    .menu-item p {
+      font-size: 0.9rem;
+    }
+  
+     .menu-item-preco {
+       font-size: 1.2rem;
+     }
+  
+     .menu-item-imagem {
+       height: 190px;
+     }
+  }
+  
+  @media (max-width: 480px) {
+     header h1 {
+      font-size: 1.8rem;
+    }
+  
+    /* Opcional: Quebrar navbar em coluna */
+     .menu-nav {
+       flex-direction: column;
+       padding: 10px 0;
+     }
+     .menu-nav li {
+       margin: 5px 0; /* Espaçamento vertical entre itens */
+     }
+  
+  
+     .menu-section h2 {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+     }
+  
+    .lista-itens-cardapio {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+     .menu-item-imagem {
+       height: 180px;
+     }
+  }
