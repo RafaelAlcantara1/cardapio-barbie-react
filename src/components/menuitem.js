@@ -1,4 +1,4 @@
-// src/components/MenuItem.js
+// components/menuitem.js
 import React from 'react';
 
 // Componente funcional MenuItem que recebe um 'item' como prop
@@ -18,12 +18,11 @@ function MenuItem({ item }) {
       <img
         src={item.imagemUrl}      // URL da imagem vinda da prop 'item'
         alt={item.nome}           // Texto alternativo com o nome do item
-        className="menu-item-imagem" // Classe CSS para a imagem
       />
       <h3>{item.nome}</h3>        {/* Nome do item */}
-      <p>{item.descricao}</p>      {/* Descrição do item */}
+      <p>{item.descricao}</p>     {/* Descrição do item */}
       <span className="menu-item-preco"> {/* Span para o preço com classe CSS */}
-        {formatCurrency(item.preco)} {/* Preço formatado */}
+        {formatCurrency(item.preco)}     {/* Preço formatado */}
       </span>
     </div>
   );
