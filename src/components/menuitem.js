@@ -15,9 +15,10 @@ function MenuItem({ item }) {
   // Retorna a estrutura JSX para um item do cardápio
   return (
     <div className="menu-item"> {/* Container do item com classe CSS */}
-      <img
+      <img 
         src={item.imagemUrl}      // URL da imagem vinda da prop 'item'
         alt={item.nome}           // Texto alternativo com o nome do item
+        loading="lazy"
       />
       <h3>{item.nome}</h3>        {/* Nome do item */}
       <p>{item.descricao}</p>     {/* Descrição do item */}

@@ -32,7 +32,7 @@ function App() {
         <div className="logo-container">
           <div className="logo">
             {/* Certifique-se que 'logo.png' está em 'public/imagens/' */}
-            <img src="/imagens/logo.png" alt="Restaurante Barbie Logo" />
+            <img src="/imagens/logo.png" alt="Restaurante Barbie Logo" loading="lazy"/>
           </div>
           <h1>Restaurante Barbie</h1>
         </div>
