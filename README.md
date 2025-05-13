@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# 🎀 Restaurante Barbie - Cardápio Digital
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um cardápio digital elegante e moderno para o Restaurante Barbie, desenvolvido com React e estilizado com CSS moderno.
 
-## Available Scripts
+![Preview do Cardápio](preview.png)
 
-In the project directory, you can run:
+## ✨ Características
 
-### `npm start`
+- Design moderno e elegante inspirado no universo Barbie
+- Interface responsiva que se adapta a todos os dispositivos
+- Menu lateral com navegação suave
+- Seções organizadas para Entradas, Pratos Principais e Sobremesas
+- Informações de contato e horário de funcionamento
+- Formulário de feedback (em desenvolvimento)
+- Integração com redes sociais
+- Newsletter (em breve)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tecnologias Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- CSS Moderno (Flexbox, Grid, Variáveis CSS)
+- Lazy Loading para imagens
+- Design Responsivo
+- Animações e Transições Suaves
 
-### `npm test`
+## 🚀 Como Executar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/cardapio-barbie-react.git
+```
 
-### `npm run build`
+2. Instale as dependências:
+```bash
+cd cardapio-barbie-react
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Execute o projeto:
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O projeto estará disponível em `http://localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📱 Responsividade
 
-### `npm run eject`
+O cardápio é totalmente responsivo e se adapta a diferentes tamanhos de tela:
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (até 767px)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🎨 Estrutura do Projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+cardapio-barbie-react/
+├── public/
+│   └── imagens/
+│       ├── logo.png
+│       ├── instagram-logo.png
+│       ├── twitter-logo.png
+│       └── tiktok-logo.png
+├── src/
+│   ├── components/
+│   │   ├── MenuSection.js
+│   │   └── MenuItem.js
+│   ├── App.js
+│   ├── styles.css
+│   └── data.js
+└── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔄 Funcionalidades em Desenvolvimento
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Formulário de feedback
+- Sistema de newsletter
+- Integração com sistema de pedidos online
+- Área administrativa para atualização do cardápio
 
-## Learn More
+## 🤝 Contribuindo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contribuições são bem-vindas! Para contribuir:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Faça um Fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
-### Code Splitting
+## 📝 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-### Analyzing the Bundle Size
+## 📞 Contato
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Restaurante Barbie
+- Email: contato@restaurantebarbie.com
+- Telefone: (11) 99999-9999
+- Endereço: Rua Barbie, 123 - São Paulo
 
-### Making a Progressive Web App
+## 🙏 Agradecimentos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Equipe de desenvolvimento
+- Designers
+- Comunidade React
+- Todos os contribuidores
