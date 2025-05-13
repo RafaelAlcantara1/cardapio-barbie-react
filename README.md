@@ -41,6 +41,7 @@ npm install
 npm start
 ```
 
+O projeto estará disponível em `http://localhost:3000`
 
 ## 📱 Responsividade
 
@@ -86,6 +87,9 @@ Contribuições são bem-vindas! Para contribuir:
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 📞 Contato
 
@@ -94,3 +98,9 @@ Restaurante Barbie
 - Telefone: (11) 99999-9999
 - Endereço: Rua Barbie, 123 - São Paulo
 
+## 🙏 Agradecimentos
+
+- Equipe de desenvolvimento
+- Designers
+- Comunidade React
+- Todos os contribuidores

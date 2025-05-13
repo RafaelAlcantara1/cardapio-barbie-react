@@ -148,13 +148,13 @@ function App() {
           <div className="footer-section">
             <h4>Redes Sociais</h4>
             <div className="social-links">
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/restaurantebarbie" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <img src="/imagens/instagram-logo.png" alt="Instagram" loading="lazy"/>
               </a>
-              <a href="#" aria-label="Twitter">
+              <a href="https://twitter.com/restaurantebarbie" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <img src="/imagens/twitter-logo.png" alt="Twitter" loading="lazy"/>
               </a>
-              <a href="#" aria-label="TikTok">
+              <a href="https://www.tiktok.com/@restaurantebarbie" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                 <img src="/imagens/tiktok-logo.png" alt="TikTok" loading="lazy"/>
               </a>
             </div>
