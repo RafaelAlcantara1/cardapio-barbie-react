@@ -3,8 +3,10 @@ import React, { Suspense, lazy, useState } from 'react';
 import './styles.css';              // Importa o CSS
 import menuItems from './data';      // Importa TODOS os itens
 
-// Lazy load the MenuSection component
+// Lazy load components
 const MenuSection = lazy(() => import('./components/MenuSection'));
+const Footer = lazy(() => import('./components/Footer'));
+const Details = lazy(() => import('./components/Details'));
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,99 +85,14 @@ function App() {
           <MenuSection id="sobremesas" title="Sobremesas" items={sobremesas} />
         </Suspense>
 
-        <div className="detalhes-container">
-          <div id="horario" className="detalhes-card">
-            <h3>Horário de Funcionamento</h3>
-            <ul className="horario-funcionamento">
-              <li>
-                <span className="dia">Segunda - Sexta</span>
-                <span>11:00 - 22:00</span>
-              </li>
-              <li>
-                <span className="dia">Sábado</span>
-                <span>11:00 - 23:00</span>
-              </li>
-              <li>
-                <span className="dia">Domingo</span>
-                <span>12:00 - 21:00</span>
-              </li>
-            </ul>
-          </div>
-
-          <div id="contato" className="detalhes-card">
-            <h3>Contato</h3>
-            <div className="contato-info">
-              <a href="tel:+5511999999999">
-                <span>📞</span> (11) 99999-9999
-              </a>
-              <a href="mailto:contato@restaurantebarbie.com">
-                <span>✉️</span> contato@restaurantebarbie.com
-              </a>
-              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
-                <span>📍</span> Rua Barbie, 123 - São Paulo
-              </a>
-            </div>
-          </div>
-
-          <div id="sobre" className="detalhes-card">
-            <h3>Sobre Nós</h3>
-            <p>
-              Bem-vindo ao Restaurante Barbie, onde a elegância encontra a gastronomia! 
-              Nossa cozinha oferece pratos sofisticados com um toque especial de glamour.
-            </p>
-            <p>
-              Ambiente exclusivo, atendimento personalizado e uma experiência 
-              gastronômica única inspirada no universo Barbie.
-            </p>
-          </div>
-        </div>
+        <Suspense fallback={<LoadingFallback />}>
+          <Details />
+        </Suspense>
       </main>
 
-      {/* Rodapé */}
-      <footer>
-        <div className="footer-content">
-          <div className="footer-section">
-            <h4>Envie seu Feedback</h4>
-            <p className="feedback-note">* Formulário em desenvolvimento</p>
-            <form className="feedback-form">
-              <input type="text" placeholder="Seu nome" disabled />
-              <input type="email" placeholder="Seu email" disabled />
-              <textarea placeholder="Sua mensagem" disabled></textarea>
-              <button type="button" disabled>Enviar Mensagem</button>
-            </form>
-          </div>
-
-          <div className="footer-section">
-            <h4>Redes Sociais</h4>
-            <div className="social-links">
-              <a href="https://www.instagram.com/restaurantebarbie" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <img src="/imagens/instagram-logo.png" alt="Instagram" loading="lazy"/>
-              </a>
-              <a href="https://twitter.com/restaurantebarbie" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <img src="/imagens/twitter-logo.png" alt="Twitter" loading="lazy"/>
-              </a>
-              <a href="https://www.tiktok.com/@restaurantebarbie" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                <img src="/imagens/tiktok-logo.png" alt="TikTok" loading="lazy"/>
-              </a>
-            </div>
-            <p className="social-note">Siga-nos para novidades e promoções!</p>
-          </div>
-
-          <div className="footer-section">
-            <h4>Newsletter</h4>
-            <p>Receba nossas novidades e promoções exclusivas!</p>
-            <form className="newsletter-form">
-              <input type="email" placeholder="Seu email" disabled />
-              <button type="button" disabled>Inscrever-se</button>
-            </form>
-            <p className="newsletter-note">* Em breve</p>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>© 2025 Restaurante Barbie - Todos os direitos reservados</p>
-        </div>
-      </footer>
+      <Suspense fallback={<LoadingFallback />}>
+        <Footer />
+      </Suspense>
 
     </div>
   );
