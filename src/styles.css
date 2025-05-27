@@ -951,3 +951,188 @@ footer::before {
     color: var(--text-dark);
     font-weight: 500;
 }
+
+/* Estilos da Promoção */
+.promocao-container {
+    background: var(--gradient-light);
+    padding: 40px 20px;
+    margin: 40px 0;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.promocao-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.promocao-content h2 {
+    color: var(--barbie-pink);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.1);
+}
+
+.promocao-texto {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hamburgueres-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.hamburguer-wrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.hamburguer-wrapper:nth-child(2) { animation-delay: 0.3s; }
+.hamburguer-wrapper:nth-child(3) { animation-delay: 0.6s; }
+.hamburguer-wrapper:nth-child(4) { animation-delay: 0.9s; }
+.hamburguer-wrapper:nth-child(5) { animation-delay: 1.2s; }
+
+.hamburguer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: wiggle 3s ease-in-out infinite;
+}
+
+.pao-superior,
+.pao-inferior {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: #f4a460;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pao-superior {
+    top: 0;
+    transform: translateZ(5px);
+}
+
+.pao-inferior {
+    bottom: 0;
+    transform: translateZ(-5px);
+}
+
+.carne {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    background: #8b4513;
+    top: 30%;
+    left: 5%;
+    transform: translateZ(3px);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alface {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    background: #90ee90;
+    top: 20%;
+    transform: translateZ(4px);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.queijo {
+    position: absolute;
+    width: 95%;
+    height: 10%;
+    background: #ffd700;
+    top: 50%;
+    left: 2.5%;
+    transform: translateZ(2px);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brilho {
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: conic-gradient(
+        from 0deg,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #4b0082,
+        #8b00ff,
+        #ff0000
+    );
+    animation: rotateRainbow 4s linear infinite;
+    opacity: 0.15;
+    filter: blur(8px);
+    pointer-events: none;
+    border-radius: 50%;
+    transform-origin: center;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+@keyframes rotateRainbow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ajustes responsivos para a promoção */
+@media (max-width: 768px) {
+    .promocao-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .promocao-texto {
+        font-size: 1.1rem;
+    }
+
+    .hamburguer-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .promocao-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .promocao-texto {
+        font-size: 1rem;
+    }
+
+    .hamburguer-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+}

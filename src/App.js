@@ -3,6 +3,7 @@ import React, { Suspense, lazy, useState, useEffect } from 'react';
 import './styles.css';              // Importa o CSS
 import menuItems from './data';      // Importa TODOS os itens
 import ThemeSwitcher from './components/ThemeSwitcher';
+import Promocao from './components/Promocao';
 
 // Lazy load components
 const MenuSection = lazy(() => import('./components/MenuSection'));
@@ -102,6 +103,7 @@ function App() {
 
       {/* Conteúdo Principal */}
       <main>
+        <Promocao />
         <Suspense fallback={<LoadingFallback />}>
           <MenuSection id="entradas" title="Entradas" items={entradas} />
         </Suspense>
