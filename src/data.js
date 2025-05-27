@@ -8,7 +8,7 @@ const menuItems = [
     descricao: 'Uma salada fresquinha com folhas verdes e molho rosa especial.',
     preco: 24.00,
     imagemUrl: '/imagens/entrada1.png',
-    categoria: 'Entrada' // Adicionado
+    categoria: 'Entrada'
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const menuItems = [
     descricao: 'Trio de mini hambúrgueres gourmet com queijo e molho especial.',
     preco: 32.00,
     imagemUrl: '/imagens/entrada2.png',
-    categoria: 'Entrada' // Adicionado
+    categoria: 'Entrada'
   },
   {
     id: 3,
@@ -24,57 +24,57 @@ const menuItems = [
     descricao: 'Salmão fresco em cubos, temperado com molho especial de limão e gengibre.',
     preco: 28.00,
     imagemUrl: '/imagens/entrada3.png',
-    categoria: 'Entrada' // Adicionado
+    categoria: 'Entrada'
   },
   // Pratos Principais
   {
     id: 4,
-    nome: 'Pasta Rosa',
-    descricao: 'Massa fresca com molho cremoso rosa e camarões.',
+    nome: 'Risoto Glamour',
+    descricao: 'Risoto cremoso com cogumelos e um toque de champagne, finalizado com parmesão.',
     preco: 45.00,
     imagemUrl: '/imagens/prato1.png',
-    categoria: 'Prato Principal' // Adicionado
+    categoria: 'Prato Principal'
   },
   {
     id: 5,
-    nome: 'Salmão Grelhado',
-    descricao: 'Filé de salmão grelhado com legumes coloridos e purê de batata.',
+    nome: 'Barbie Burger',
+    descricao: 'Hambúrguer artesanal com queijo cheddar, bacon caramelizado e molho especial rosa.',
     preco: 52.00,
     imagemUrl: '/imagens/prato2.png',
-    categoria: 'Prato Principal' // Adicionado
+    categoria: 'Prato Principal'
   },
   {
     id: 6,
-    nome: 'Risotto de Champagne',
-    descricao: 'Arroz arbóreo preparado com champagne e finalizado com parmesão.',
+    nome: 'Frango Dream',
+    descricao: 'Frango frito crocante com molho especial e acompanhamentos selecionados.',
     preco: 48.00,
     imagemUrl: '/imagens/prato3.png',
-    categoria: 'Prato Principal' // Adicionado
+    categoria: 'Prato Principal'
   },
   // Sobremesas
   {
     id: 7,
-    nome: 'Cupcake Glamour',
-    descricao: 'Cupcake de baunilha com cobertura rosa e glitter comestível.',
+    nome: 'Bolo Pink Dream',
+    descricao: 'Bolo de chocolate com cobertura rosa e decoração especial Barbie.',
     preco: 18.00,
     imagemUrl: '/imagens/sobremesa1.png',
-    categoria: 'Sobremesa' // Adicionado
+    categoria: 'Sobremesa'
   },
   {
     id: 8,
-    nome: 'Macarons Sortidos',
-    descricao: 'Três macarons em tons pastéis com diferentes sabores.',
+    nome: 'Sorvete Vanilla Glam',
+    descricao: 'Sorvete de baunilha com calda de morango e confeitos coloridos.',
     preco: 22.00,
     imagemUrl: '/imagens/sobremesa2.png',
-    categoria: 'Sobremesa' // Adicionado
+    categoria: 'Sobremesa'
   },
   {
     id: 9,
-    nome: 'Parfait Dreams',
-    descricao: 'Camadas de iogurte, frutas vermelhas e granola em tons rosados.',
+    nome: 'Torta Pink Delight',
+    descricao: 'Fatia de torta de frutas vermelhas com chantilly e decoração especial.',
     preco: 24.00,
     imagemUrl: '/imagens/sobremesa3.png',
-    categoria: 'Sobremesa' // Adicionado
+    categoria: 'Sobremesa'
   }
 ];
 

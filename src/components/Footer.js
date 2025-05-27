@@ -19,13 +19,31 @@ const Footer = () => {
           <h4>Redes Sociais</h4>
           <div className="social-links">
             <a href="https://www.instagram.com/restaurantebarbie" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img src="/imagens/instagram-logo.png" alt="Instagram" loading="lazy"/>
+              <img 
+                src="/imagens/instagram-logo.png" 
+                alt="Logo do Instagram - Siga-nos no Instagram" 
+                width="32" 
+                height="32"
+                loading="lazy"
+              />
             </a>
             <a href="https://twitter.com/restaurantebarbie" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <img src="/imagens/twitter-logo.png" alt="Twitter" loading="lazy"/>
+              <img 
+                src="/imagens/twitter-logo.png" 
+                alt="Logo do Twitter - Siga-nos no Twitter" 
+                width="32" 
+                height="32"
+                loading="lazy"
+              />
             </a>
             <a href="https://www.tiktok.com/@restaurantebarbie" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-              <img src="/imagens/tiktok-logo.png" alt="TikTok" loading="lazy"/>
+              <img 
+                src="/imagens/tiktok-logo.png" 
+                alt="Logo do TikTok - Siga-nos no TikTok" 
+                width="32" 
+                height="32"
+                loading="lazy"
+              />
             </a>
           </div>
           <p className="social-note">Siga-nos para novidades e promoções!</p>
