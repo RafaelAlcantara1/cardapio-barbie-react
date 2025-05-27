@@ -1,7 +1,8 @@
 // src/App.js
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
 import './styles.css';              // Importa o CSS
 import menuItems from './data';      // Importa TODOS os itens
+import ThemeSwitcher from './components/ThemeSwitcher';
 
 // Lazy load components
 const MenuSection = lazy(() => import('./components/MenuSection'));
@@ -10,6 +11,28 @@ const Details = lazy(() => import('./components/Details'));
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme ? JSON.parse(savedTheme) : {
+      name: 'Barbie Pink',
+      colors: {
+        primary: '#ff69b4',
+        light: '#ffc0cb',
+        lighter: '#ffd1dc',
+        gradient: 'linear-gradient(135deg, #ff69b4 0%, #ff8dc7 100%)',
+        gradientLight: 'linear-gradient(135deg, #ffc0cb 0%, #ffd1dc 100%)'
+      }
+    };
+  });
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--barbie-pink', currentTheme.colors.primary);
+    document.documentElement.style.setProperty('--barbie-light-pink', currentTheme.colors.light);
+    document.documentElement.style.setProperty('--barbie-lighter-pink', currentTheme.colors.lighter);
+    document.documentElement.style.setProperty('--gradient-pink', currentTheme.colors.gradient);
+    document.documentElement.style.setProperty('--gradient-light', currentTheme.colors.gradientLight);
+    localStorage.setItem('theme', JSON.stringify(currentTheme));
+  }, [currentTheme]);
 
   // Filtra os itens por categoria
   const entradas = menuItems.filter(item => item.categoria === 'Entrada');
@@ -28,6 +51,11 @@ function App() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleThemeChange = (theme) => {
+    setCurrentTheme(theme);
+    document.querySelector('.theme-options').classList.remove('show');
+  };
+
   return (
     // Div principal da aplicação
     <div className="App">
@@ -40,6 +68,7 @@ function App() {
           </div>
           <h1>Restaurante Barbie</h1>
         </div>
+        <ThemeSwitcher currentTheme={currentTheme.name} onThemeChange={handleThemeChange} />
         {/* Barra de Navegação */}
         <nav>
           <div className="hamburger-container">

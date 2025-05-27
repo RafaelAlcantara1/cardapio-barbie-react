@@ -77,7 +77,7 @@ nav {
     box-shadow: var(--shadow-md);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
     padding: 0 20px;
     height: 60px;
     display: flex;
@@ -674,7 +674,7 @@ footer::before {
         left: -80%;
         width: 80%;
         height: 100vh;
-        background: linear-gradient(135deg, var(--barbie-pink) 0%, #ff8dc7 100%);
+        background: var(--gradient-pink);
         flex-direction: column;
         padding: 80px 20px 20px;
         transition: left 0.3s ease;
@@ -868,4 +868,86 @@ footer::before {
         max-width: 900px;
         margin: 0 auto;
     }
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-button {
+    background: var(--barbie-pink);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.theme-button:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.theme-options {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: var(--barbie-white);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: var(--shadow-lg);
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 180px;
+}
+
+.theme-options.show {
+    display: flex;
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: left;
+}
+
+.theme-option:hover {
+    background: var(--barbie-lighter-pink);
+}
+
+.theme-option.active {
+    background: var(--barbie-light-pink);
+}
+
+.theme-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--barbie-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.theme-name {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 500;
 }
